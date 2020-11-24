@@ -6,7 +6,8 @@
     <h1>{{pluralize(pins|length, 'Pin')}} </h1>
     {% for pin in pins %}
         <article>
-            <h2>{{ pin.title }}</h2>
+            {# on doit mettre l'id pour show, donc id: = la clé, id.pin l'id a retourner#}
+            <h2><a href="{{ path('pins_show', {id: pin.id}) }}">{{ pin.title }}</a></h2>
             <p>{{ pin.description }}</p>
         </article>
     {% endfor %}
