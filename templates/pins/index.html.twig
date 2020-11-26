@@ -9,7 +9,7 @@
             {# on doit mettre l'id pour show, donc id: = la clé, id.pin l'id a retourner#}
             <h2><a href="{{ path('pins_show', {id: pin.id}) }}">{{ pin.title }}</a></h2>
             <p>{{ pin.description|u.truncate(10, '...', false) }}</p>
-            <p>Créé il y a {{ pin.createdAt|ago }}</p>
+            <p>Créé {{ pin.createdAt|ago }}</p>
         </article>
     {% endfor %}
 {% endblock %}
