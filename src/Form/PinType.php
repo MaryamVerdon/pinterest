@@ -4,6 +4,7 @@ namespace App\Form;
 
 use App\Entity\Pin;
 use PhpParser\Node\Stmt\Label;
+use Symfony\Component\DomCrawler\Image;
 use Symfony\Component\Form\AbstractType;
 use Symfony\Component\Form\FormBuilderInterface;
 use Symfony\Component\OptionsResolver\OptionsResolver;
@@ -21,6 +22,7 @@ class PinType extends AbstractType
                 'allow_delete' => true,
                 'delete_label' => 'Supprimer l\'image',
                 'download_uri' => false,
+                'imagine_pattern' => 'squared_thumbnail_small',
             ])
             ->add('title', TextType::class, ['label' => 'Titre'])
             ->add('description')
